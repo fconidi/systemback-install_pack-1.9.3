@@ -2,8 +2,9 @@
 #
 # Systemback Debian packages installer script.
 #
-# Compatible with Debian 9.0 Stretch
-#                 Ubuntu 17.10 (Artful Aardvark)
+# Compatible with Debian 10.0 Buster
+#                 Ubuntu 18.04 (Bionic Beaver)
+#                 Ubuntu 20.04 (Focal Fossa))
 #
 # This script can be used and modified freely, without any restrictions.
 #
@@ -26,11 +27,11 @@ EOF
 }
 
 case "$(lsb_release -cs)" in
-    Stretch)
-    release=Debian_Stretch
+    Buster)
+    release=Debian_Buster
     ;;
     artful)
-    release=Ubuntu_Artful
+    release=Ubuntu_Focal
     ;;
     bionic)
     release=Ubuntu_Bionic
@@ -49,8 +50,8 @@ EOF
     cat << EOF
  Press 'A' to abort the installation, or select one of the following releases:
 
-  1 ─ Debian 9.0 (Stretch)
-  2 ─ Ubuntu 17.10 (Artful Aardvark)
+  1 ─ Debian 10.0 (Buster)
+  2 ─ Ubuntu 20.04 (Focal Fossa)
   3 ─ Ubuntu 18.04 (Bionic Beaver)
 EOF
 
@@ -67,10 +68,10 @@ EOF
           break
           ;;
         1)
-          release=Debian_Stretch
+          release=Debian_Buster
           ;;
         2)
-          release=Ubuntu_Artful
+          release=Ubuntu_Focal
           ;;
         3)
           release=Ubuntu_Bionic
